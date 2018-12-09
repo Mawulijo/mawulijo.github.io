@@ -6,10 +6,19 @@
     <description>Recent content in Galleries on mawulijo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 09 Dec 2018 13:50:59 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Dec 2018 14:10:53 +0000</lastBuildDate>
     
 	<atom:link href="/gallery/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Movies Catalogue</title>
+      <link>/gallery/movies-catalogue/</link>
+      <pubDate>Sun, 09 Dec 2018 14:10:53 +0000</pubDate>
+      
+      <guid>/gallery/movies-catalogue/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>La-Bezbo</title>
