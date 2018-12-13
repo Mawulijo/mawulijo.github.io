@@ -194,7 +194,7 @@ OR unique_id='3640'
 
 <p>Since we want to read the contents of the file line by line, next is to scan the <code>uniqueIds.txt</code> file using the <code>Scan()</code> method provided by the <code>bufio</code> package in the standard library and parse it the <code>IDsFile</code> variable.  Since the <code>Scan()</code> method returns a boolean, &ndash; true if content exists and false otherwise, we pick the first unique id with the <code>if</code> condition on line 44 and append it to the <code>queryFile.sql</code> in line 45 using the <code>q</code> variable declared on line 26 because it gives us a pointer the <code>queryFile.sql</code> file &ndash; thus its &ldquo;mermory location&rdquo; where we can alter its contents.</p>
 
-<p>We move on at line 48 with an infinite loop to append the remaining IDs in a formated way with the help of of <code>Fprintln</code> from the <code>fmt</code> package. Remember <code>Scan()</code> returns a bool. So the loop breaks it reaches the end of the file.</p>
+<p>We move on at line 48 with an infinite loop to append the remaining IDs in a formated way with the help of of <code>Fprintln</code> from the <code>fmt</code> package. Remember <code>Scan()</code> returns a bool. So the loop breaks when it reaches the end of the file.</p>
 
 <p>In doing all this, we also cease the opportunity to get rid of all white spaces surrounding our unique IDs in the <code>uniqueIds.txt</code> file using <code>TrimSpace()</code> method from the <code>strings</code> package.</p>
 
