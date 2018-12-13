@@ -6,19 +6,21 @@
     <description>Recent content in Blogs on mawulijo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Dec 2018 10:03:05 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>/blog/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>Simplifying a Laborous Task With Golang</title>
+      <link>/blog/simplifying-laborous-task-with-golang/</link>
+      <pubDate>Wed, 12 Dec 2018 10:03:05 +0000</pubDate>
       
-      <guid>/blog/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <guid>/blog/simplifying-laborous-task-with-golang/</guid>
+      <description>Introduction In this post, I am going explain how I used Golang to simplify a daunting task at work.
+Before I start, I assume you have basic knowledge in SQL like me :-)
+Lets take a look at this query
+[created_date],[last_edited_user],[last_edited_date],[object_id] FROM [&amp;lt;DB_NAME&amp;gt;].[dbo].[&amp;lt;TABLE_NAME&amp;gt;] WHERE unique_id=&amp;quot;1111&amp;quot; OR unique_id=&#39;2934&#39; OR unique_id=&#39;3150&#39; OR unique_id=&#39;3640&#39; ***** thousands of unique_id *****  Obviously, its a simple query, provided you have a few number unique IDs.</description>
     </item>
     
     <item>

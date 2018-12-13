@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  
+
+  <title>
+    Simplifying a Laborous Task With Golang | mawulijo</title>
+
+  <meta name="title" content="Simplifying a Laborous Task With Golang | mawulijo">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="generator" content="">
+  <base href="">
+
+  
+  <meta name="description" content="How I used golang to write an sql query">
+  
+
+  
+  <meta name="author" content="Toma Nistor">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@mawulijo">
+  <meta name="twitter:creator" content="@mawulijo">
+  
+
+  <meta property="og:title" content="Simplifying a Laborous Task With Golang | mawulijo">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+
+  
+  <meta property="og:image" content="images/osprey.png">
+  
+
+  
+  <meta name="og:description" content="How I used golang to write an sql query">
+  
+
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+  <meta name="theme-color" content="#FFF">
+  
+
+  <link rel="canonical" href="/blog/simplifying-laborous-task-with-golang/">
+
+  
+
+  <link rel="stylesheet" href="/styles/main.css"
+    type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  
+
+  
+</head>
+  <body>
+    
+
+
+
+<nav class="row middle-xs center-xs">
+  <div class="col-xs-1 col-sm-1 logo pull-left" id="sitelogo">
+    <a href="#"><img src="images/mawulijo.webp" alt="mawulijo"></a>
+  </div>
+  
+  <div class="col-xs-3 col-sm-2">
+    <h3><a href="/#about">About</a></h3>
+  </div>
+  
+  <div class="col-xs-3 col-sm-2">
+    <h3><a href="/#work">Work</a></h3>
+  </div>
+  
+  <div class="col-xs-3 col-sm-2">
+    <h3><a href="/#blog">Blog</a></h3>
+  </div>
+  
+  <div class="col-xs-3 col-sm-2">
+    <h3><a href="/#contact">Contact</a></h3>
+  </div>
+  
+  <div class="col-xs-3 col-sm-1 nav-toggle">
+    <a href="" class="nav-icon" onclick="return false"><img src="/images/icon-menu.png" alt="Open Menu"><img src="/images/icon-x.png"
+        alt="Close Menu" style="display: none;"></a>
+  </div>
+</nav>
+
+<section class="nav-full row middle-xs center-xs">
+  <div class="col-xs-12">
+    <div class="row middle-xs center-xs">
+      
+      <div class="col-xs-12">
+        <h1><a href="/#about">About</a></h1>
+      </div>
+      
+      <div class="col-xs-12">
+        <h1><a href="/#work">Work</a></h1>
+      </div>
+      
+      <div class="col-xs-12">
+        <h1><a href="/#blog">Blog</a></h1>
+      </div>
+      
+      <div class="col-xs-12">
+        <h1><a href="/#contact">Contact</a></h1>
+      </div>
+      
+    </div>
+  </div>
+</section>
+    <main>
+
+      <section class="container">
+          <section class="content">
+              <h1> Simplifying a Laborous Task With Golang </h1>
+
+              <div class="sub-header">
+                  December 12, 2018 · 4 minute read
+              </div>
+
+              <article class="entry-content">
+                  
+
+<h2 id="introduction">Introduction</h2>
+
+<p>In this post, I am going explain how I used Golang to simplify a daunting task at work.</p>
+
+<p>Before I start, I assume you have basic knowledge in SQL like me :-)</p>
+
+<p>Lets take a look at this query</p>
+
+<pre><code class="language-SELECT">[created_date],[last_edited_user],[last_edited_date],[object_id] 
+FROM [&lt;DB_NAME&gt;].[dbo].[&lt;TABLE_NAME&gt;] 
+WHERE 
+unique_id=&quot;1111&quot;
+OR unique_id='2934'
+OR unique_id='3150'
+OR unique_id='3640'
+***** thousands of unique_id *****
+</code></pre>
+
+<p>Obviously, its a simple query, provided you have a few number unique IDs. But unfortunately, the &ldquo;god of few numbers&rdquo; never blesses me in such a situation. Its always the other way round.</p>
+
+<p>The QA team for a project I happen to part of always demands reports like these mostly with thousands of IDs in an excel file.</p>
+
+<h3 id="how-i-did-it"><strong>How I did it</strong></h3>
+
+<ul>
+<li>I would copy the coulmn with the unique IDs in the file and paste them in an editor</li>
+<li>Put the right strings/condition &ldquo;<strong><em>OR unique_id=&lsquo;id_number&rsquo;</em></strong>&rdquo; around every unique id (here <strong><em>id_number</em></strong>) by way of using <strong><em>alt</em></strong>, <strong><em>command</em></strong> and <strong><em>arrow keys</em></strong> combo to position the cursor at serveral places at the same time. and type the condition.</li>
+</ul>
+
+<p>Quite better than doing it one by one I guess. But bear in mind, my finger has to on the appropriate <strong><em>arrow key</em></strong> till I reach the end of the file and not to mention that these IDs come with various lengths so consistency of the cursor position is not guaranteed.</p>
+
+<h3 id="cause-to-change-my-ways"><strong>Cause to change my ways</strong></h3>
+
+<p>So, out of fraustration and the resolution to make golang part of me, I decided to automate this laborous task to a large extent. I wrote a tiny program in Go to help me out.</p>
+
+<p>Here is the program structure</p>
+
+<pre><code class="language-|-">|
+|- uniqueIds.txt
+|
+|- queryFile.sql ( created by our code )
+</code></pre>
+
+<p>Here is <code>main.go</code> with explanations below.</p>
+
+<script src="https://gist.github.com/Mawulijo/a29f42681c853f199b9757ed4da252d0.js"></script>
+
+
+<p>Lets see what is happening here.</p>
+
+<p>Inside of <code>createQueryFile()</code> is where all the action happens. On line 20, we create a file called <code>queryFile.sql</code> using the <code>Create()</code> method provided by <code>os</code> package. We also check for errors whiles doing so just incase anything goes wrong.</p>
+
+<p>On line 26, we open the <code>queryFile.sql</code> file in append and read only mode and on line 31, we write the the beginning part of our sql query stored in the <code>pQueryString</code> variable declared in line 13.</p>
+
+<p>On line 34, we open the file <code>uniqueIds.txt</code> in read write mode but defer its closure since we will be reading from it and we don&rsquo;t want any premature closure till we are done reading its contents. This file contains all the unique IDs pulled from the excel file. We store it in the <code>IDsFile</code> variable and read its contents starting from line 42.</p>
+
+<p>Since we want to read the contents of the file line by line, next is to scan the <code>uniqueIds.txt</code> file using the <code>Scan()</code> method provided by the <code>bufio</code> package in the standard library and parse it the <code>IDsFile</code> variable.  Since the <code>Scan()</code> method returns a boolean, &ndash; true if content exists and false otherwise, we pick the first unique id with the <code>if</code> condition on line 44 and append it to the <code>queryFile.sql</code> in line 45 using the <code>q</code> variable declared on line 26 because it gives us a pointer the <code>queryFile.sql</code> file &ndash; thus its &ldquo;mermory location&rdquo; where we can alter its contents.</p>
+
+<p>We move on at line 48 with an infinite loop to append the remaining IDs in formated way with the help of of <code>Fprintln</code> from the <code>fmt</code> package. Remember <code>Scan()</code> returns a bool. So the loop breaks it reaches the end of the file.</p>
+
+<p>In doing all this, we also cease the opportunity to get rid of all white spaces surrounding our unique IDs in the <code>uniqueIds.txt</code> file using <code>TrimSpace()</code> method from the <code>strings</code> package.</p>
+
+<p>Just like all SQL querries, we terminate ours with line 56.</p>
+
+<p>We then invoke our function in line 60 inside the main function so that it gets executed anytime we run the program with the famous <code>go run main.go</code> command.</p>
+
+<p>With this program, all I now have to do is provide the <code>uniqueIds.txt</code> file with IDs each on a separate line and I get back to learining Go ASAP. ;-)</p>
+
+<p>To end this post, I would like stress on the fact that Go is easy to learn and small enough to fit into the programmers mind. I had fun doing this as I didn&rsquo;t expect it would be this simple with. I am now ever prepared for my QA team.</p>
+
+<p>I hope you find this useful and give Golang a try in solving those daunting tasks you run away from.</p>
+
+<p>Thanks for your time.</p>
+
+              </article>
+
+              <div class="pagination">
+                  
+                      <a href="/blog/myself/">&laquo; Myself</a>
+                  
+                  
+              </div>
+          </section>
+          <br>
+          <section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function () {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+      var disqus_shortname = 'https-mawulijo-github-io';
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view comments powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>.</noscript>
+</section>
+      </section>
+
+    </main>
+    <footer class="row middle-xs center-xs">
+  
+  <div class="col-xs-3 col-md-2"><a target="_blank" href="https://github.com/mawulijo">GitHub</a></div>
+  
+
+  
+  <div class="col-xs-3 col-md-2"><a target="_blank" href="https://linkedin.com/in/agbekujoshua">LinkedIn</a></div>
+  
+
+  
+  <div class="col-xs-3 col-md-2"><a target="_blank" href="https://twitter.com/mawulijo">Twitter</a></div>
+  
+
+  
+  <div class="col-xs-12">
+    
+    Copyright &copy; 2018 mawulijo.
+    
+    
+    <a href="https://gohugo.io" target="_blank">Powered by Hugo</a>
+    
+  </div>
+  
+
+</footer>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+<script src="scripts/main.min.js"
+  type="text/javascript"></script>
+
+
+
+  </body>
+</html>
