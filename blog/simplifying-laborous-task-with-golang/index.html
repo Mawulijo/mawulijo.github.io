@@ -142,9 +142,10 @@
 
 <p>Lets take a look at this query</p>
 
-<pre><code class="language-SELECT">[created_date],[last_edited_user],[last_edited_date],[object_id] 
-FROM [&lt;DB_NAME&gt;].[dbo].[&lt;TABLE_NAME&gt;] 
-WHERE 
+<pre><code>SELECT [circuit_id],[unique_id],[unique_number],[created_user],
+[created_date],[last_edited_user],[last_edited_date],[object_id]
+FROM [&lt;DB_NAME&gt;].[dbo].[&lt;TABLE_NAME&gt;]
+WHERE
 unique_id=&quot;1111&quot;
 OR unique_id='2934'
 OR unique_id='3150'
@@ -171,7 +172,8 @@ OR unique_id='3640'
 
 <p>Here is the program structure</p>
 
-<pre><code class="language-|-">|
+<pre><code>|- main.go
+|
 |- uniqueIds.txt
 |
 |- queryFile.sql ( created by our code )
