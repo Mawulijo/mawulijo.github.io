@@ -20,7 +20,7 @@
       <description>Introduction In this post, I am going explain how I used Golang to simplify a daunting task at work.
 Before I start, I assume you have basic knowledge in SQL like me :-)
 Lets take a look at this query
-SELECT [circuit_id],[unique_id],[unique_number],[created_user], [created_date],[last_edited_user],[last_edited_date],[object_id] FROM [&amp;lt;DB_NAME&amp;gt;].[dbo].[&amp;lt;TABLE_NAME&amp;gt;] WHERE unique_id=&amp;quot;1111&amp;quot; OR unique_id=&#39;2934&#39; OR unique_id=&#39;3150&#39; OR unique_id=&#39;3640&#39; ***** thousands of unique_id *****  Obviously, its a simple query, provided you have a few number unique IDs.</description>
+SELECT [circuit_id],[unique_id],[unique_number],[created_user], [created_date],[last_edited_user],[last_edited_date],[object_id] FROM [&amp;lt;DB_NAME&amp;gt;].[dbo].[&amp;lt;TABLE_NAME&amp;gt;] WHERE unique_id=&#39;1111&#39; OR unique_id=&#39;2934&#39; OR unique_id=&#39;3150&#39; OR unique_id=&#39;3640&#39; ***** thousands of unique_id *****  Obviously, its a simple query, provided you have a few number unique IDs.</description>
     </item>
     
     <item>
