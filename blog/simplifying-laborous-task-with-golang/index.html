@@ -188,7 +188,7 @@ OR unique_id='3640'
 
 <p>Inside of <code>createQueryFile()</code> is where all the action happens. On line 20, we create a file called <code>queryFile.sql</code> using the <code>Create()</code> method provided by <code>os</code> package. We also check for errors whiles doing so just incase anything goes wrong.</p>
 
-<p>On line 26, we open the <code>queryFile.sql</code> file in append and read only mode and on line 31, we write the the beginning part of our sql query stored in the <code>pQueryString</code> variable declared in line 13.</p>
+<p>On line 26, we open the <code>queryFile.sql</code> file in append and read only mode and on line 31, we write the the beginning part of our sql query stored in the <code>pQueryString</code> variable declared in line 13 to the file.</p>
 
 <p>On line 34, we open the file <code>uniqueIds.txt</code> in read write mode but defer its closure since we will be reading from it and we don&rsquo;t want any premature closure till we are done reading its contents. This file contains all the unique IDs pulled from the excel file. We store it in the <code>IDsFile</code> variable and read its contents starting from line 42.</p>
 
