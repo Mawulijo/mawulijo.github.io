@@ -57,8 +57,7 @@ SELECT [circuit_id],[unique_id],[unique_number],[created_user], [created_date],[
       
       <guid>/blog/myself/</guid>
       <description>Profile I am a full stack web and mobile developer and systems administrator based in Accra, Ghana.
-I have been building websites and applications for the past two years and I graduated with my first degree from Switzerland Management Center University (SMCU) with a Bachelor in IT-Security (BBA). I am currently pursuing my second degree in BSc. (Hons) Computer Science at Regent University College of Science and Technology
-I have worked with the Electricity Company of Ghana for the since 2013 as an IT Assistant.</description>
+I have been building websites and applications for the past two years and I graduated with my first degree from Switzerland Management Center University (SMCU) with a Bachelor in IT-Security (BBA). I am currently pursuing my second degree in BSc. (Hons) Computer Science at Regent University College of Science and Technology. Defered for a year</description>
     </item>
     
     <item>
@@ -68,7 +67,7 @@ I have worked with the Electricity Company of Ghana for the since 2013 as an IT 
       
       <guid>/blog/cv/</guid>
       <description>Profile I am a logical thinker, resourceful and willing to take full ownership of user problems until they are fully resolved. I am hungry to learn Computing and its manifold aspects from the ground up
-Professional Background JULY 2013 - Present  IT Assistant - Electricity Company of Ghana  E.C.G provides electric power to the southern part of Ghana   Few of my duties include:  Provide broad IT related support via remote or in person as needed to minimize downtime 2018: Part of a curated team of individuals for the successful Enterprise Service Bus (ESB) 2017: Part of a curated team of individuals for the successful implementation of Geographic Information System (GIS) 2017: System administrator for the Perfomance Management System (PMS) 2015: Liaise between the I.</description>
+Professional Background JULY 2013 - Present  IT Assistant - Power Distribution Services Ghana  P.D.S provides electric power to the southern part of Ghana   Few of my duties include:  Provide broad IT related support via remote or in person as needed to minimize downtime 2018: Part of a curated team of individuals for the successful Enterprise Service Bus (ESB) 2017: Part of a curated team of individuals for the successful implementation of Geographic Information System (GIS) 2017: System administrator for the Perfomance Management System (PMS) 2015: Liaise between the I.</description>
     </item>
     
     <item>
@@ -77,8 +76,7 @@ Professional Background JULY 2013 - Present  IT Assistant - Electricity Company 
       <pubDate>Tue, 27 Jun 2017 17:39:21 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>I am a self driven individual and passionate about computing especially programing. My dream is to become a Software Engineer with golang as my go to language.
-I am currently pursuing a degree in BSc. (Hons) Computer Science at Regent University College of Science and Technology</description>
+      <description>I am a self driven individual and passionate about computing especially programing. My dream is to become a Software Engineer/Architect.</description>
     </item>
     
   </channel>
