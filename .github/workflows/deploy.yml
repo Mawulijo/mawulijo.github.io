@@ -13,6 +13,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-pages # CMS_* secrets are stored on this environment
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
