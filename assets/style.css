@@ -82,7 +82,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .lead{font-size:17px}
   .meta{flex-direction:column;gap:4px}
   section{padding:34px 0}
-  .btns .btn{flex:1 1 auto;text-align:center}
+  .btns .btn{flex:1 1 0;text-align:center}
+  .btns .btn.primary{flex-basis:100%}
   .grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:380px){.grid{grid-template-columns:1fr}}
