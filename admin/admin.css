@@ -1,0 +1,23 @@
+.login{max-width:360px;margin:12vh auto;padding:0 20px}
+.login h1{font-size:22px}
+label{display:block;font:12px var(--mono);color:var(--muted);margin:12px 0 4px}
+input,textarea,select{width:100%;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px 10px;font:14px var(--sans)}
+textarea{min-height:72px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--accent-3);outline-offset:0}
+.err{color:#c0392b;font:13px var(--mono);min-height:20px;margin-top:10px}
+.ok{color:var(--accent);font:13px var(--mono)}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:3}
+.bar .sp{flex:1}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin:18px 0}
+.tabs button{font:13px var(--mono);background:none;border:1px solid var(--line);color:var(--muted);padding:5px 12px;border-radius:6px;cursor:pointer}
+.tabs button.on{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+button.btn{cursor:pointer}
+button.danger{color:#c0392b}
+.item{margin-bottom:14px}
+.item .hd{display:flex;gap:6px;align-items:center;margin-bottom:6px;font:12px var(--mono);color:var(--muted)}
+.item .hd .sp{flex:1}
+.item .hd button{font:12px var(--mono);background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;cursor:pointer;padding:2px 8px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+.panel{margin-top:14px;padding:14px;border:1px dashed var(--line);border-radius:8px}
+.hint{font-size:13px;color:var(--muted)}

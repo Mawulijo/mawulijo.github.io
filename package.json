@@ -1,0 +1,9 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "CMS_USERNAME=${CMS_USERNAME:-admin} CMS_PASSWORD=${CMS_PASSWORD:-local-dev-passphrase} node scripts/build.mjs && npx --yes http-server dist -p 4173 -c-1"
+  }
+}
