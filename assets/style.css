@@ -11,7 +11,8 @@
   --bg:#0e1413; --surface:#141c1a; --ink:#e4ebe8; --muted:#8fa09a; --line:#233029;
   --accent:#3fc79a; --accent-2:#e2a64a; --accent-3:#5aaee8; --code:#18221f;}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:60px;-webkit-text-size-adjust:100%}
+body{overflow-wrap:break-word}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:var(--accent-3);text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -69,3 +70,19 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;font:12.5px var(--mo
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 :focus-visible{outline:2px solid var(--accent-3);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+@media (max-width:640px){
+  header.top .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:0;row-gap:2px}
+  .brand{order:1;flex:1}
+  #theme{order:2}
+  nav{order:3;width:100%;gap:20px;overflow-x:auto;scrollbar-width:none;padding:8px 0 10px}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap}
+  .hero{padding:44px 0 28px}
+  .lead{font-size:17px}
+  .meta{flex-direction:column;gap:4px}
+  section{padding:34px 0}
+  .btns .btn{flex:1 1 auto;text-align:center}
+  .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:380px){.grid{grid-template-columns:1fr}}
